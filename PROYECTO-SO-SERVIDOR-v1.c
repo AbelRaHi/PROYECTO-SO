@@ -24,7 +24,7 @@ int Log_in (char nombre[20], char contra[20])
 	}
 	
 	//Inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root","mysql","BBDD_JUEGO",0,NULL,0);
+	conn = mysql_real_connect (conn, "localhost","root","mysql","M5_JUEGO",0,NULL,0);
 	if (conn == NULL)
 	{
 		printf ("Error al inicialiazar la conexion \n: %u %s", mysql_errno(conn), mysql_error(conn));
@@ -33,7 +33,7 @@ int Log_in (char nombre[20], char contra[20])
 	
 	//CONSULTA SQL
 	char consulta [512];
-	sprintf(consulta, "SELECT * FROM (Jugador) WHERE NOMBRE = '%s' AND CONTRASEÑA = '%s'",nombre, contra);
+	sprintf(consulta, "SELECT * FROM (Jugador) WHERE NOMBRE = '%s' AND CONTRASEÃ‘A = '%s'",nombre, contra);
 	err = mysql_query (conn, consulta);
 	
 	if (err != 0)
@@ -80,7 +80,7 @@ int Consulta1 (char nombre[20], char suma[10])
 	}
 	
 	//Inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root","mysql","BBDD_JUEGO",0,NULL,0);
+	conn = mysql_real_connect (conn, "localhost","root","mysql","M5_JUEGO",0,NULL,0);
 	if (conn == NULL)
 	{
 		printf ("Error al inicialiazar la conexion \n: %u %s", mysql_errno(conn), mysql_error(conn));
@@ -135,7 +135,7 @@ int Consulta2 (char nombre[20], char npartidas[10])
 	}
 	
 	//Inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root","mysql","BBDD_JUEGO",0,NULL,0);
+	conn = mysql_real_connect (conn, "localhost","root","mysql","M5_JUEGO",0,NULL,0);
 	if (conn == NULL)
 	{
 		printf ("Error al inicialiazar la conexion \n: %u %s", mysql_errno(conn), mysql_error(conn));
@@ -190,7 +190,7 @@ int Consulta3 (char nombre[20], char ubicacion[20], char idpartidas[20])
 	}
 	
 	//Inicializar la conexion
-	conn = mysql_real_connect (conn, "localhost","root","mysql","BBDD_JUEGO",0,NULL,0);
+	conn = mysql_real_connect (conn, "localhost","root","mysql","M5_JUEGO",0,NULL,0);
 	if (conn == NULL)
 	{
 		printf ("Error al inicialiazar la conexion \n: %u %s", mysql_errno(conn), mysql_error(conn));
